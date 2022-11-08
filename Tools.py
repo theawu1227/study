@@ -68,5 +68,35 @@ def create_zip():
         logger.info("文件夹\"{0}\"已压缩为\"{1}\".".format(dir_path, zip_file))
 
 
+# 遍历大小写
+def read_az():
+    import string
+    for a in string.ascii_lowercase:
+        print(a)
+
+    for A in string.ascii_uppercase:
+        print(A)
+
+
+# 字典写入数据库
+def dic_sql():
+    dic = {
+        'acaedmy': 'academy',
+        'academy_url': 'academy_url',
+        'list_url': 'list_s',
+        'name': 'name',
+        'phone': 'phone',
+        "mainurl": 'mainurl'
+    }
+    # 字段列表
+    field_list = dic.keys()
+    # 字段长字符串
+    fields = ",".join(field_list)
+    # %s 传参字符串
+    s_l = ",".join(['%s' for _ in range(len(field_list))])
+    # 传入值列表
+    values_ = list(dic.values())
+
+
 if __name__ == '__main__':
     read_dir()
