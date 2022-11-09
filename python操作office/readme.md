@@ -38,5 +38,6 @@
 
 ## 判断表格文件是否存在
 `my_file = os.path.exists(self.excel_file)  # return True/False`
+
 如果True 则向指定表格追加数据 -- input_table()
 False,则创建指定名称的表格 -- create_table()
